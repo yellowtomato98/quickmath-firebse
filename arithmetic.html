@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="./assets/qmathlogo.png">
+    <link rel="stylesheet" href="./styles.css" />
+    <script src = "./javascript/game.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>QuickMath</title>
+</head>
+<body>
+    <div id="game-screen">
+        <div id="timer"></div>
+        <div id="score"></div>
+        <div id="game">
+            <span id="num1" style="padding:7px"></span>
+            + <span id="num2" style="padding:7px"></span> 
+            = <input type="text" id="user-input">
+        </div>
+        <div id="check">incorrect, try again!</div>
+    </div>
+
+    <div id="end-screen">
+        <div id="end-score"></div>
+        <a href="./arithmetic.html">
+            <button type="button" class="button backbuttons">play again</button>
+        </a><br>
+
+        <a href="./index.html">
+            <button type="button" class="button backbuttons">home</button>
+        </a>
+    </div>
+
+    <script>
+        myGame = new Game();
+        myGame.main();
+    </script>
+</body>
+</html>
