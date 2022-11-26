@@ -1,7 +1,7 @@
 class Game {
     constructor(){
         this.score = 0;
-        this.amt_time = 20;
+        this.amt_time = 120;
         this.time = this.amt_time;
         this.start_time = new Date().getTime();
     }
@@ -72,15 +72,3 @@ Game.prototype.end = function(){
     document.getElementById("end-screen").style.visibility="visible"
     document.getElementById("end-score").innerHTML = "Score: " + this.score;
 }
-
-document.addEventListener("keypress", function(event){
-    if (document.activeElement === document.getElementById("user-input")){
-        if (event.key == "Enter"){
-            myGame.check_answer_enter()
-        }
-    }
-})
-
-document.addEventListener("input", function(){
-    myGame.check_answer()
-})
