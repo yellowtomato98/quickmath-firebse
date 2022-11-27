@@ -21,7 +21,7 @@ Game.prototype.check_answer = function(){
     if (input == this.ans){
         this.score+=1;
         document.getElementById("user-input").value = ''
-        myGame.generate_problem()
+        this.generate_problem()
         document.getElementById("check").style.visibility = "hidden"
     }
 }
@@ -67,6 +67,7 @@ Game.prototype.main = function(){
 }
 
 Game.prototype.end = function(){
+    this.time=0
     document.getElementById("user-input").value = ''
     document.getElementById("game-screen").style.visibility="hidden"
     document.getElementById("end-screen").style.visibility="visible"
