@@ -3,9 +3,6 @@
 <head>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="./styles.css" />
-    <script type="module" src="./javascript/mult.js"></script>
-    <!-- <script src = "./javascript/game.js"></script>
-    <script src = "./javascript/events.js"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -13,8 +10,27 @@
 </head>
 <body>
     <div id="home-page">
-        <h1>Welcome to QuickMath!</h1>
-        <p>This is multiplayer mode.</p>
+        <h1>Quickmath Multiplayer Mode</h1>
+        <div>
+            <a href="lobby.html"><button type="button" class="button" id="create-new-lobby">create new lobby</button></a>
+            <button type="button" class="button" id="enter-lobby-screen">enter lobby code</button>
+        </div>
+        <br>
+        <a href="index.html">
+            <button type="button" class="button backbutton" id="back-main">back</button>
+        </a>
     </div>
+
+    <div id="lobby-code">
+        <div id="lobby-code-entry">
+            <h1> Enter lobby code: </h1>
+            <input placeholder="#123456" type="text" id="lobby-input"><br>
+            <button type="button" class="button backbutton" id="back-lobby">back</button>
+        </div>
+    </div>
+
+    <script type = "module" src="./javascript/server.js"></script>
+    <script type = "module" src="./javascript/mult.js"></script>
+    <script src="./javascript/events.js"></script>
 </body>
 </html>
